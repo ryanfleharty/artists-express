@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/artists">Back to artist home</a>
+    <a href="/artists/<%=artist._id%>/edit">Edit this artist</a>
+    <h1>Here is the artist named <%= artist.name %></h1>
+    <h4>Here are their albums</h4>
+    <% artist.albums.forEach((album)=>{ %>
+        <p><%= album.name %></p>
+    <% }) %>
+</body>
+</html>

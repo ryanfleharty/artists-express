@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">We're going home</a>
+    <a href="/albums/new">Drop a new mixtape</a>
+    <h1>Here are the albums</h1>
+    <% albums.forEach((album)=>{ %>
+        <div>
+            <a href="/albums/<%=album._id%>"><%=album.name%></a>
+            <p>It was written by <%= album.artist %></p>
+        </div>
+      
+    <% }) %>
+</body>
+</html>
